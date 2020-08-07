@@ -1,3 +1,4 @@
+#%%
 from selenium import webdriver
 import math
 
@@ -21,3 +22,11 @@ input4.send_keys("Russia")
 button = browser.find_element_by_css_selector("button.btn")
 button.click()
 
+alert = browser.switch_to.alert
+alert_text = alert.text
+alert.accept()
+browser.close()
+
+print(alert_text)
+
+# %%
