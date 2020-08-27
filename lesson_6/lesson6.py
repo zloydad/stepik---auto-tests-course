@@ -1,3 +1,4 @@
+#%%
 from selenium import webdriver
 
 browser = webdriver.Chrome()
@@ -6,3 +7,6 @@ browser.get(link)
 button = browser.find_element_by_tag_name("button")
 button.click()
 assert True
+
+
+# %%
