@@ -1,5 +1,6 @@
 #%%
 from selenium import webdriver
+import time
 
 link = "http://suninjuly.github.io/simple_form_find_task.html"
 browser = webdriver.Chrome()
@@ -15,6 +16,8 @@ input4 = browser.find_element_by_id("country")
 input4.send_keys("Russia")
 button = browser.find_element_by_css_selector("button.btn")
 button.click()
+
+time.sleep(1)
 
 alert = browser.switch_to.alert
 alert_text = alert.text
